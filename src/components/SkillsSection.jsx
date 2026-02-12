@@ -12,14 +12,13 @@ const skills = [
   { name: "PHP", level: 80, category: "frontend" },
 
   // Backend
-    { name: "MySQL", level: 85, category: "backend" },
-    { name: "Node.js", level: 80, category: "backend" },
+  { name: "MySQL", level: 85, category: "backend" },
+  { name: "Node.js", level: 80, category: "backend" },
   // Tools
   { name: "Git/GitHub", level: 90, category: "tools" },
   { name: "VS Code", level: 95, category: "tools" },
-    { name: "Figma", level: 80, category: "tools" },
-    { name: "Vercel", level: 90, category: "tools" },
-
+  { name: "Figma", level: 80, category: "tools" },
+  { name: "Vercel", level: 90, category: "tools" },
 ];
 
 const categories = ["all", "frontend", "backend", "tools"];
@@ -28,10 +27,11 @@ export const SkillsSection = () => {
   const [activeCategory, setActiveCategory] = useState("all");
 
   const filteredSkills = skills.filter(
-    (skill) => activeCategory === "all" || skill.category === activeCategory
+    (skill) => activeCategory === "all" || skill.category === activeCategory,
   );
+
   return (
-    <section id="skills" className="py-24 px-4 relative bg-secondary/30">
+    <section id="skills" className="py-24 px-4 relative bg-background">
       <div className="container mx-auto max-w-5xl">
         <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
           My <span className="text-primary"> Skills</span>
@@ -46,7 +46,7 @@ export const SkillsSection = () => {
                 "px-5 py-2 rounded-full transition-colors duration-300 capitalize",
                 activeCategory === category
                   ? "bg-primary text-primary-foreground"
-                  : "bg-secondary/70 text-forefround hover:bd-secondary"
+                  : "bg-secondary text-foreground hover:bg-secondary/80",
               )}
             >
               {category}
@@ -58,12 +58,15 @@ export const SkillsSection = () => {
           {filteredSkills.map((skill, key) => (
             <div
               key={key}
-              className="bg-card p-6 rounded-lg shadow-xs card-hover"
+              className="bg-card p-6 rounded-lg border border-border/50 shadow-sm card-hover"
             >
               <div className="text-left mb-4">
-                <h3 className="font-semibold text-lg"> {skill.name}</h3>
+                <h3 className="font-semibold text-lg text-foreground">
+                  {" "}
+                  {skill.name}
+                </h3>
               </div>
-              <div className="w-full bg-secondary/50 h-2 rounded-full overflow-hidden">
+              <div className="w-full bg-secondary h-2 rounded-full overflow-hidden">
                 <div
                   className="bg-primary h-2 rounded-full origin-left animate-[grow_1.5s_ease-out]"
                   style={{ width: skill.level + "%" }}

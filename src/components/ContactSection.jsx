@@ -1,5 +1,5 @@
 import {
-    Facebook,
+  Facebook,
   Instagram,
   Linkedin,
   Mail,
@@ -31,7 +31,7 @@ export const ContactSection = () => {
     }, 1500);
   };
   return (
-    <section id="contact" className="py-24 px-4 relative bg-secondary/30">
+    <section id="contact" className="py-24 px-4 relative bg-background">
       <div className="container mx-auto max-w-5xl">
         <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
           Get <span className="text-primary"> Discuss</span>
@@ -174,7 +174,7 @@ export const ContactSection = () => {
                 type="submit"
                 disabled={isSubmitting}
                 className={cn(
-                  "cosmic-button w-full flex items-center justify-center gap-2"
+                  "cosmic-button w-full flex items-center justify-center gap-2",
                 )}
               >
                 {isSubmitting ? "Sending..." : "Send Message"}

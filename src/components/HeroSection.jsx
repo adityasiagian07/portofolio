@@ -4,17 +4,17 @@ export const HeroSection = () => {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex flex-col items-center justify-center px-4"
+      className="relative min-h-screen flex flex-col items-center justify-center px-4 bg-background text-foreground"
     >
       <div className="container max-w-4xl mx-auto text-center z-10">
         <div className="space-y-6">
           <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
-            <span> Hi, I'm</span>
+            <span className="text-foreground/90"> Hi, I'm</span>
             <span className="text-primary"> Aditya</span>
             <span className="text-gradient ml-2">Siagian </span>
           </h1>
 
-          <p className="text-lg md:text-xl text-muted-foreground max-2-2xl mx-auto">
+          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
             I'm a passionate software engineer with a knack for creating
             innovative solutions. I specialize in web development, and I'm
             always eager to learn and grow in this ever-evolving field.

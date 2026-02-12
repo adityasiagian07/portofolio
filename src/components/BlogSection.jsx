@@ -8,7 +8,7 @@ export const BlogSection = () => {
   const latestPosts = blogPosts.slice(0, 3);
 
   return (
-    <section id="blog" className="py-20 px-6 relative">
+    <section id="blog" className="py-20 px-6 relative bg-background">
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -32,7 +32,7 @@ export const BlogSection = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="group relative bg-slate-900/40 border border-slate-800 rounded-2xl overflow-hidden hover:border-blue-500/50 transition-all backdrop-blur-sm"
+              className="group relative bg-card/40 border border-border rounded-2xl overflow-hidden hover:border-primary/50 transition-all backdrop-blur-sm"
             >
               <Link to={`/blog/${post.id}`}>
                 <div className="aspect-video overflow-hidden">
@@ -43,16 +43,16 @@ export const BlogSection = () => {
                   />
                 </div>
                 <div className="p-6">
-                  <span className="text-xs text-blue-400 font-semibold mb-2 block uppercase tracking-wider">
+                  <span className="text-xs text-primary font-semibold mb-2 block uppercase tracking-wider">
                     {post.category}
                   </span>
-                  <h3 className="text-xl font-bold mb-3 group-hover:text-blue-400 transition-colors line-clamp-2">
+                  <h3 className="text-xl font-bold mb-3 text-foreground group-hover:text-primary transition-colors line-clamp-2">
                     {post.title}
                   </h3>
-                  <p className="text-slate-400 text-sm line-clamp-3 mb-4">
+                  <p className="text-muted-foreground text-sm line-clamp-3 mb-4">
                     {post.excerpt}
                   </p>
-                  <div className="flex items-center text-blue-400 text-sm font-semibold">
+                  <div className="flex items-center text-primary text-sm font-semibold">
                     Baca Selengkapnya{" "}
                     <ArrowRight
                       size={16}
