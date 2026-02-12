@@ -8,7 +8,7 @@ export const BlogSection = () => {
   const latestPosts = blogPosts.slice(0, 3);
 
   return (
-    <section id="blog" className="py-20 px-6 relative bg-background">
+    <section id="blog" className="py-20 px-6 relative bg-transparent">
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
